@@ -8,18 +8,16 @@ This project was developed for the **Kaggle "CMI Detect Behavior" competition**.
 
 ## 🛠️ Technical Approach & Tech Stack
 
-This solution employed a multi-faceted approach, combining a novel deep learning architecture with sophisticated feature engineering and a robust training strategy.
+This solution's success came from a practical and effective strategy: leveraging high-performing public models and enhancing them through custom feature engineering and a robust ensembling technique.
 
-#### Model Architecture
-A novel **hybrid CNN-Transformer (BERT) architecture** was developed in PyTorch. This hybrid model leverages the strengths of both architectures:
-* **CNNs** were used to capture local patterns and features from the raw sensor data sequences.
-* **Transformers (BERT)** were used to model long-range dependencies and contextual relationships across the time series.
+#### Model Strategy
+Instead of building a model from scratch, this approach involved a careful selection and fine-tuning of **two high-performing public models** shared within the Kaggle community. My primary contribution focused on:
+* **Hyperparameter Tuning:** Systematically tuning the models' parameters to optimize their performance on this specific dataset.
+* **Feature Experimentation:** Testing different combinations of features to identify the most predictive inputs for each model.
+* **Ensembling:** Developing an effective ensembling strategy to combine the strengths and predictions of both fine-tuned models, which led to a significant boost in the final score.
 
 #### Feature Engineering
-A key part of the project's success was the creation of a robust set of custom features. These were not just statistical aggregations but were derived by applying **physics-based principles**, such as **gravity compensation**, to the raw accelerometer and gyroscope data. This provided the model with a richer, more meaningful representation of the user's movements.
-
-#### Final Strategy
-The final submission was an **ensemble of 5 models**, each trained using a **5-fold cross-validation strategy**. This technique significantly enhanced the overall prediction accuracy and the solution's robustness.
+A key part of the project's success was the creation of a robust set of custom features. These were not just statistical aggregations but were derived by applying **physics-based principles**, such as **gravity compensation**, to the raw accelerometer and gyroscope data. This provided the models with a richer, more meaningful representation of the user's movements.
 
 #### Tech Stack
 * **Languages & Core Libraries:** Python, NumPy, Pandas, Polars
