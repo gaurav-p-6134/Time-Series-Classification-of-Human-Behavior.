@@ -1,0 +1,10 @@
+torch
+polars
+pandas
+numpy
+scipy
+lightgbm
+pywavelets
+transformers
+scikit-learn
+joblib
